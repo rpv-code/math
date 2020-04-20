@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/math-app/static/css/main.ac0656db.chunk.css",
+    "main.js": "/math-app/static/js/main.07b46c7c.chunk.js",
+    "main.js.map": "/math-app/static/js/main.07b46c7c.chunk.js.map",
+    "runtime-main.js": "/math-app/static/js/runtime-main.879eee2b.js",
+    "runtime-main.js.map": "/math-app/static/js/runtime-main.879eee2b.js.map",
+    "static/css/2.69121389.chunk.css": "/math-app/static/css/2.69121389.chunk.css",
+    "static/js/2.bbbd90c4.chunk.js": "/math-app/static/js/2.bbbd90c4.chunk.js",
+    "static/js/2.bbbd90c4.chunk.js.map": "/math-app/static/js/2.bbbd90c4.chunk.js.map",
+    "index.html": "/math-app/index.html",
+    "precache-manifest.8b31cf721f9666f65953349a51e578aa.js": "/math-app/precache-manifest.8b31cf721f9666f65953349a51e578aa.js",
+    "service-worker.js": "/math-app/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/math-app/static/css/2.69121389.chunk.css.map",
+    "static/css/main.ac0656db.chunk.css.map": "/math-app/static/css/main.ac0656db.chunk.css.map",
+    "static/js/2.bbbd90c4.chunk.js.LICENSE.txt": "/math-app/static/js/2.bbbd90c4.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/math-app/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.879eee2b.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.bbbd90c4.chunk.js",
+    "static/css/main.ac0656db.chunk.css",
+    "static/js/main.07b46c7c.chunk.js"
+  ]
+}
