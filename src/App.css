@@ -47,7 +47,7 @@ button{
   background-color: #222;
   font-size:calc(10px + 2vmin);
   color:#EEE;
-  padding:1.5rem;
+  padding:1rem;
 }
 .mainWrapper{
   align-items: center;
@@ -55,6 +55,9 @@ button{
   padding:1rem;
 }
 .cell {
-  padding:.5rem;
-  font-size:2rem;
+  padding:.75rem .25rem 0 .25rem;
+  font-size:1.5rem;
+}
+.ButtonBox{
+  margin: .5rem;
 }

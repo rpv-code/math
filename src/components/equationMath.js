@@ -62,7 +62,7 @@ class EquationMath extends Component {
                 </div>
                 {this.state.problem}           
                 <div className="col-12 cell">
-                    <h1> Your answer is {this.state.answer}</h1>
+                    <h2> Your answer is {this.state.answer}</h2>
                 </div>
                 <div className="col-12 cell">
                     {this.state.correctAnswers > 0 ? <div> You have {this.state.correctAnswers} correct answers in a row! </div> : null}
