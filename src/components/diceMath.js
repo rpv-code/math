@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import DiceOne from '../assets/dice_one.PNG';
-import DiceTwo from '../assets/dice_two.PNG';
-import DiceThree from '../assets/dice_three.PNG';
-import DiceFour from '../assets/dice_four.PNG';
-import DiceFive from '../assets/dice_five.PNG';
-import DiceSix from '../assets/dice_six.PNG';
+import Image from './Image';
 
 class DiceMath extends Component {
     state = { 
@@ -12,7 +7,15 @@ class DiceMath extends Component {
         problem:'',
         resetDisplay: false,
         correctAnswers: 0, 
-        numDice: 2
+        numDice: 2,
+        diceImage: {
+            diceOne: 'dice_one.PNG',
+            diceTwo: 'dice_two.PNG',
+            diceThree: 'dice_three.PNG',
+            diceFour: 'dice_four.PNG',
+            diceFive: 'dice_five.PNG',
+            diceSix: 'dice_six.PNG'
+        }
      }
 
     componentDidMount(){
@@ -29,42 +32,41 @@ class DiceMath extends Component {
         for (let i=0; i<this.state.numDice; i++){
             numberRolled.push((Math.floor(Math.random() * 6)));
             if (numberRolled[i] === 1){
-                diceImage.push(DiceOne) ;
+                diceImage.push(this.state.diceImage.diceOne) ;
             }
             else if (numberRolled[i] === 2){
-                diceImage.push(DiceTwo);
+                diceImage.push(this.state.diceImage.diceTwo);
             }
             else if (numberRolled[i] === 3){
-                diceImage.push(DiceThree);
+                diceImage.push(this.state.diceImage.diceThree);
             }
             else if (numberRolled[i] === 4){
-                diceImage.push(DiceFour);
+                diceImage.push(this.state.diceImage.diceFour);
             }
             else if (numberRolled[i] === 5){
-                diceImage.push(DiceFive);
+                diceImage.push(this.state.diceImage.diceFive);
             }
             else if (numberRolled[i] === 6){
-                diceImage.push(DiceSix);
+                diceImage.push(this.state.diceImage.diceSix);
             }
+            console.log("dice image: " + diceImage[i]);
         }
+        let test = 'dice_one.PNG';
 
-        console.log(numberRolled[0]);
         const problem=
         <div className="col-12">
             <div className="row">
-            <div className="col-6 cell">{this.imgTags(diceImage)}</div><div className="col-6 cell"><div>How many?</div><input className="answerBox" type="text" size="4" id="answer" autoFocus autoComplete="off"/></div>
+            <div className="col-6 cell"><Image source={test} key={test} /></div><div className="col-6 cell"><div>How many?</div><input className="answerBox" type="text" size="4" id="answer" autoFocus autoComplete="off"/></div>
             </div>
             <div className="col-12 cell"><button type="button" onClick={() => this.checkAnswer(numberRolled, document.getElementById('answer').value)}>Check Answer</button></div>
         </div> 
-        console.log("problem" + problem);
         this.setState({problem});
     }
 
     imgTags(diceImage){
         let imgText = '';
         for (let i=0; i<this.state.numDice; i++){
-            let imgSRC = diceImage[i];
-            imgText = imgText + "<img src=" + imgSRC + " alt='dice' />";
+            imgText = imgText + <Image source={diceImage[i]} key={diceImage[i] + i} />;
         }
         console.log(imgText);
         return (
